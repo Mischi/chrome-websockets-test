@@ -11,7 +11,7 @@ The following WebSocket call succeeds:
 new WebSocket('ws://localhost:3000', undefined);
 ```
 
-All of the following WebSocket call are failing:
+All of the following WebSocket calls are failing:
 ```js
 new WebSocket('ws://localhost:3000', undefined, {});
 new WebSocket('ws://localhost:3000', undefined, true);
