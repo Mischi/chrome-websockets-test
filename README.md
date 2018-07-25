@@ -8,19 +8,19 @@ headers even though the `protocols` argument is undefined.
 
 The following WebSocket call succeeds:
 ```js
-new WebSocket('wss://rinkeby.infura.io/ws', undefined);
+new WebSocket('ws://localhost:3000', undefined);
 ```
 
 All of the following WebSocket call are failing:
 ```js
-new WebSocket('wss://rinkeby.infura.io/ws', undefined, {});
-new WebSocket('wss://rinkeby.infura.io/ws', undefined, true);
-new WebSocket('wss://rinkeby.infura.io/ws', undefined, undefined, {});
+new WebSocket('ws://localhost:3000', undefined, {});
+new WebSocket('ws://localhost:3000', undefined, true);
+new WebSocket('ws://localhost:3000', undefined, undefined, {});
 ```
 
 The error we get is:
 ```
-WebSocket connection to 'wss://rinkeby.infura.io/ws' failed: Error during WebSocket handshake: Sent non-empty 'Sec-WebSocket-Protocol' header but no response was received
+WebSocket connection to 'ws://localhost:3000' failed: Error during WebSocket handshake: Sent non-empty 'Sec-WebSocket-Protocol' header but no response was received
 ```
 
 ## Analysis
